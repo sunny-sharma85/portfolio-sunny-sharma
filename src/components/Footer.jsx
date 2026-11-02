@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -7,37 +7,40 @@ const Footer = () => {
   const socialLinks = [
     {
       name: 'GitHub',
-      icon: <FaGithub size={18} />,
-      url: 'https://github.com/sunny-sharma85'
+      icon: <FaGithub size={18} className="text-gray-900 group-hover:text-white transition-colors" />,
+      url: 'https://github.com/devendersharma',
+      hoverBg: 'hover:bg-gray-900 hover:border-gray-900'
     },
     {
       name: 'LinkedIn',
-      icon: <FaLinkedin size={18} />,
-      url: 'https://www.linkedin.com/in/devender-sharma-484a36288/' 
+      icon: <FaLinkedin size={18} className="text-[#0A66C2]" />,
+      url: 'https://linkedin.com/in/devendersharma',
+      hoverBg: 'hover:bg-[#0A66C2]/10 hover:border-[#0A66C2]'
     },
     {
       name: 'Instagram',
-      icon: <FaInstagram size={18} />,
-      url: 'https://www.instagram.com/isunnyy.x/' 
+      icon: <FaInstagram size={18} className="text-[#E4405F]" />,
+      url: 'https://instagram.com',
+      hoverBg: 'hover:bg-[#E4405F]/10 hover:border-[#E4405F]'
     },
     
   ];
 
   return (
-    <footer className="bg-gray-950 text-gray-400 py-10 px-4 sm:px-6 lg:px-8 border-t border-gray-900">
+    <footer className="bg-slate-100 text-slate-600 py-10 px-4 sm:px-6 lg:px-8 border-t border-slate-200">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
         
         {/* Left Side: Branding / Copyright */}
         <div className="text-center sm:text-left">
-          <h3 className="text-lg font-bold text-white tracking-wider">
-            Devender<span className="text-cyan-400">.dev</span>
+          <h3 className="text-lg font-extrabold text-slate-900 tracking-wider">
+            Devender<span className="text-cyan-600">.dev</span>
           </h3>
-          <p className="text-xs text-gray-500 mt-1">
+          <p className="text-xs text-slate-500 mt-1">
             © {currentYear} Devender Sharma. Built with React & Tailwind CSS.
           </p>
         </div>
 
-        {/* Right Side: Social Link Tags with Icons */}
+        {/* Right Side: Social Link Tags with Brand Colors */}
         <div className="flex items-center gap-3">
           {socialLinks.map((social, index) => (
             <a
@@ -46,7 +49,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={social.name}
-              className="p-2.5 rounded-xl bg-gray-900 border border-gray-800 text-gray-300 hover:text-cyan-400 hover:border-cyan-500/50 hover:bg-gray-800/60 transition-all duration-200 shadow-sm"
+              className={`p-2.5 rounded-xl bg-white border border-slate-200 transition-all duration-200 shadow-sm group ${social.hoverBg}`}
             >
               {social.icon}
             </a>

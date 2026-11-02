@@ -1,50 +1,57 @@
 import React from 'react';
+import { FaArrowRight, FaDownload } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative bg-gray-950 text-white min-h-[calc(100vh-4rem)] flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative bg-white text-gray-900 min-h-[90vh] flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8 border-b border-gray-200">
       
-      {/* Background Glowing Ambient Light */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none"></div>
+      {/* Light Ambient Glow Effect */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-      <div className="relative max-w-4xl mx-auto text-center z-10">
+      <div className="relative max-w-4xl mx-auto text-center z-10 space-y-6">
         
-        {/* Status Badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-900/90 border border-gray-800 text-cyan-400 text-xs sm:text-sm font-medium mb-6 shadow-inner">
-          <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-          Available for Full-Stack / MERN Stack Roles
+        {/* Badge / Tag */}
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-700 text-xs sm:text-sm font-semibold shadow-sm">
+          <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span>
+          Available for Full-Stack Opportunities
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight mb-4">
-          Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Sunny Sharma</span>
+        <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight">
+          Hi, I'm <span className="text-cyan-600">Devender Sharma</span>
         </h1>
 
         {/* Subtitle / Role */}
-        <p className="text-xl sm:text-2xl font-semibold text-gray-300 mb-6">
-          Full-Stack MERN Developer 🚀
+        <p className="text-xl sm:text-2xl font-medium text-gray-700">
+          Full-Stack MERN Developer based in Shimla
         </p>
 
-        {/* Description */}
-        <p className="max-w-2xl mx-auto text-base sm:text-lg text-gray-400 mb-10 leading-relaxed">
-          BCA graduate from Chandigarh, building scalable web applications with clean frontend design and robust backend architecture.
+        {/* Short Description */}
+        <p className="max-w-2xl mx-auto text-gray-600 text-base sm:text-lg leading-relaxed">
+          I build scalable, modern, and high-performance web applications using MongoDB, Express.js, React, and Node.js. Turning complex ideas into clean, user-centric interfaces.
         </p>
 
-        {/* Call to Action Buttons (Replaced <a> with <Link>) */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        {/* Call to Action Buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          
+          {/* View Projects Button */}
           <Link
             to="/projects"
-            className="w-full sm:w-auto px-8 py-3 rounded-lg bg-cyan-500 hover:bg-cyan-600 text-gray-950 font-bold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 text-center"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-cyan-600 hover:bg-cyan-700 text-white font-bold text-sm transition-all shadow-lg hover:shadow-cyan-600/30"
           >
-            View Projects
+            View Projects <FaArrowRight size={14} />
           </Link>
-          <Link
-            to="/contact"
-            className="w-full sm:w-auto px-8 py-3 rounded-lg bg-gray-900 hover:bg-gray-800 text-white border border-gray-800 font-medium transition-all duration-200 text-center"
+
+          {/* Download Resume Button */}
+          <a
+            href="/devender_sharma_cv.pdf"
+            download="Devender_Sharma_CV.pdf"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold text-sm transition-all border border-gray-300 shadow-sm"
           >
-            Contact Me
-          </Link>
+            <FaDownload size={14} /> Download CV
+          </a>
+
         </div>
 
       </div>
