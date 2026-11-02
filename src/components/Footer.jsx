@@ -8,19 +8,19 @@ const Footer = () => {
     {
       name: 'GitHub',
       icon: <FaGithub size={18} className="text-gray-900 group-hover:text-white transition-colors" />,
-      url: 'https://github.com/devendersharma',
+      url: 'https://github.com/sunny-sharma85',
       hoverBg: 'hover:bg-gray-900 hover:border-gray-900'
     },
     {
       name: 'LinkedIn',
       icon: <FaLinkedin size={18} className="text-[#0A66C2]" />,
-      url: 'https://linkedin.com/in/devendersharma',
+      url: 'https://www.linkedin.com/in/devender-sharma-484a36288/',
       hoverBg: 'hover:bg-[#0A66C2]/10 hover:border-[#0A66C2]'
     },
     {
       name: 'Instagram',
       icon: <FaInstagram size={18} className="text-[#E4405F]" />,
-      url: 'https://instagram.com',
+      url: 'https://www.instagram.com/isunnyy.x/',
       hoverBg: 'hover:bg-[#E4405F]/10 hover:border-[#E4405F]'
     },
     
