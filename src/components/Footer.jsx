@@ -36,7 +36,7 @@ const Footer = () => {
             Devender<span className="text-cyan-600">.dev</span>
           </h3>
           <p className="text-xs text-slate-500 mt-1">
-            © {currentYear} Devender Sharma. Built with React & Tailwind CSS.
+            © {currentYear} Devender Sharma. All Right Reserved
           </p>
         </div>
 

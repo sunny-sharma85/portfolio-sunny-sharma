@@ -44,7 +44,7 @@ const About = () => {
           {/* Left Side: Bio */}
           <div className="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
             <p>
-              Hi again! I'm <span className="text-cyan-600 font-semibold">Devender Sharma</span>, a passionate BCA graduate based in <span className="text-slate-900 font-semibold">Shimla</span>.
+              Hi again! I'm <span className="text-cyan-600 font-semibold">Devender Sharma</span>, a passionate BCA graduate 
             </p>
             <p>
               Right now, I am fully focused on leveling up my skills as a <span className="text-slate-900 font-semibold">MERN Stack Developer</span>. I love building web apps from scratch—turning ideas into clean, functional, and responsive user interfaces with powerful backend support.

@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 
-const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+const Contact = (props) => {
+  const [formData, setFormData] = useState({ 
+    name: '',
+    email: '',
+    message: '' 
+  });
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
@@ -19,13 +23,13 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="bg-slate-50 text-slate-900 py-20 px-4 sm:px-6 lg:px-8 border-t border-slate-200">
+    <section id="contact" className="bg-slate-50 text-slate-900 py-20 px-4 sm:px-6 lg:px-8 border-t border-slate-200 overflow-hidden">
       <div className="max-w-4xl mx-auto">
         
-        {/* Section Heading */}
-        <div className="text-center mb-12">
+        {/* Section Heading with Zoom-in Animation */}
+        <div className="text-center mb-12" data-aos="zoom-in" data-aos-duration="800">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-3">
-            Get In <span className="text-cyan-600">Touch</span>
+            Contact <span className="text-cyan-600">Us</span>
           </h2>
           <p className="text-slate-600 text-base sm:text-lg">
             Have a project in mind, a job opportunity, or just want to say hi? Drop a message!
@@ -34,8 +38,8 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
           
-          {/* Left Side: Info & Socials */}
-          <div className="flex flex-col justify-between space-y-6">
+          {/* Left Side: Info & Socials (Slide in from Left) */}
+          <div className="flex flex-col justify-between space-y-6" data-aos="fade-right" data-aos-duration="900">
             <div>
               <h3 className="text-xl font-bold mb-3 text-cyan-600">Let's Talk</h3>
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
@@ -47,12 +51,12 @@ const Contact = () => {
                   <span className="text-cyan-600 font-semibold">📍 Location:</span> Shimla / Chandigarh, India
                 </p>
                 <p className="flex items-center gap-3">
-                  <span className="text-cyan-600 font-semibold">✉️ Email:</span> devender.dev@example.com
+                  <span className="text-cyan-600 font-semibold">✉️ Email:</span> shandilsharma1010@gmail.com
                 </p>
               </div>
             </div>
 
-            {/* Social Links (Using standard <a> tags for external links) */}
+            {/* Social Links */}
             <div>
               <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Find me on</h4>
               <div className="flex flex-wrap gap-3">
@@ -84,8 +88,8 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Right Side: Form */}
-          <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Right Side: Form (Slide in from Right) */}
+          <form onSubmit={handleSubmit} className="space-y-4" data-aos="fade-left" data-aos-duration="900">
             {submitted && (
               <div className="p-3 bg-emerald-50 border border-emerald-200 text-emerald-700 text-sm rounded-xl text-center font-medium">
                 Thanks! Your message has been received successfully. 🚀

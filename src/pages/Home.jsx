@@ -1,4 +1,5 @@
 import Skills from "../components/Skills"
+import Contact from "./Contact"
 import Hero from "./Hero"
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <>
     <Hero/>
     <Skills/>
+    <Contact title="Contact-"/>
    
     </>
   )
