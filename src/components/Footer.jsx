@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
@@ -35,9 +35,9 @@ const Footer = () => {
           <h3 className="text-lg font-extrabold text-slate-900 tracking-wider">
             Devender<span className="text-cyan-600">.dev</span>
           </h3>
-          <p className="text-xs text-slate-500 mt-1">
+           <Link to={"/"}> <p className="text-xs text-slate-500 mt-1">
             © {currentYear} Devender Sharma. All Right Reserved
-          </p>
+          </p> </Link>
         </div>
 
         {/* Right Side: Social Link Tags with Brand Colors */}
