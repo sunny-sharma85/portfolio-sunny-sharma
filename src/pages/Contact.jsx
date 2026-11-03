@@ -51,7 +51,7 @@ const Contact = (props) => {
                   <span className="text-cyan-600 font-semibold">📍 Location:</span> Shimla / Chandigarh, India
                 </p>
                 <p className="flex items-center gap-3">
-                  <span className="text-cyan-600 font-semibold">✉️ Email:</span> shandilsharma1010@gmail.com
+                  <span className="text-cyan-600 font-semibold">✉️ Email:</span> devendersharma0823@gmail.com
                 </p>
               </div>
             </div>
