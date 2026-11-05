@@ -6,14 +6,14 @@ import { SiExpress, SiTailwindcss } from 'react-icons/si';
 
 const Skills = () => {
   const skills = [
-    { name: "JavaScript (ES6+)", icon: <FaJs className="text-yellow-600" />, level: "Advanced" },
-    { name: "React.js", icon: <FaReact className="text-cyan-600" />, level: "Advanced" },
-    { name: "Node.js", icon: <FaNodeJs className="text-emerald-600" />, level: "Intermediate" },
-    { name: "Express.js", icon: <SiExpress className="text-slate-700" />, level: "Intermediate" },
-    { name: "MongoDB", icon: <FaDatabase className="text-emerald-600" />, level: "Intermediate" },
-    { name: "HTML5", icon: <FaHtml5 className="text-orange-600" />, level: "Advanced" },
-    { name: "CSS3", icon: <FaCss3Alt className="text-blue-600" />, level: "Advanced" },
-    { name: "Git & GitHub", icon: <FaGitAlt className="text-orange-700" />, level: "Intermediate" }
+    { name: "JavaScript (ES6+)", icon: <FaJs className="text-yellow-600" />, },
+    { name: "React.js", icon: <FaReact className="text-cyan-600" />,  },
+    { name: "Node.js", icon: <FaNodeJs className="text-emerald-600" />, },
+    { name: "Express.js", icon: <SiExpress className="text-slate-700" />,  },
+    { name: "MongoDB", icon: <FaDatabase className="text-emerald-600" />,  },
+    { name: "HTML5", icon: <FaHtml5 className="text-orange-600" />,  },
+    { name: "CSS3", icon: <FaCss3Alt className="text-blue-600" />, },
+    { name: "Git & GitHub", icon: <FaGitAlt className="text-orange-700" />, }
   ];
 
   return (
