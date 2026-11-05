@@ -6,7 +6,7 @@ const Projects = () => {
     {
       title: "Movie Search App",
       description: "Developed a responsive movie discovery web app allowing users to search titles, view detailed information, ratings, and posters dynamically using external movie database APIs.",
-      techStack: ["React.js", "Tailwind CSS", "REST API"],
+      techStack: ["React.js", , "REST API"],
       liveLink: "https://movie-search-app-rust-mu.vercel.app/", 
       githubLink: "https://github.com/sunny-sharma85/Movie-Search-App" 
     },

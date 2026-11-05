@@ -13,7 +13,6 @@ const Skills = () => {
     { name: "MongoDB", icon: <FaDatabase className="text-emerald-600" />, level: "Intermediate" },
     { name: "HTML5", icon: <FaHtml5 className="text-orange-600" />, level: "Advanced" },
     { name: "CSS3", icon: <FaCss3Alt className="text-blue-600" />, level: "Advanced" },
-    { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-600" />, level: "Advanced" },
     { name: "Git & GitHub", icon: <FaGitAlt className="text-orange-700" />, level: "Intermediate" }
   ];
 
