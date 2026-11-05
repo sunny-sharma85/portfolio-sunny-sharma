@@ -37,7 +37,7 @@ const Skills = () => {
               key={index}
               className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-cyan-400 transition-all flex flex-col items-center text-center space-y-3 group"
               data-aos="fade-up"
-              data-aos-delay={index * 80} // Har card thode delay ke sath animate hoga
+              data-aos-delay={index * 80} 
             >
               <div className="text-4xl group-hover:scale-110 transition-transform duration-200">
                 {skill.icon}

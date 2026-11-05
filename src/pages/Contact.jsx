@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from "@emailjs/browser";
 
 const Contact = (props) => {
   const [formData, setFormData] = useState({ 
@@ -14,12 +15,30 @@ const Contact = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", formData);
-    
     setSubmitted(true);
-    setFormData({ name: '', email: '', message: '' });
-    
-    setTimeout(() => setSubmitted(false), 5000);
+
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+    };
+
+    emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      templateParams,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+    .then(() => {
+     
+      setFormData({ name: '', email: '', message: '' });
+      setTimeout(() => setSubmitted(false), 5000);
+    })
+    .catch((error) => {
+      console.error("Failed...", error);
+      alert("Something went wrong!");
+      setSubmitted(false);
+    });
   };
 
   return (
@@ -104,7 +123,7 @@ const Contact = (props) => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                placeholder="Recruiter / Friend"
+                placeholder="Enter Your Name"
                 className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 focus:outline-none focus:border-cyan-600 transition-colors text-sm"
               />
             </div>
@@ -117,7 +136,7 @@ const Contact = (props) => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                placeholder="name@example.com"
+                placeholder="Enter Your Email"
                 className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 focus:outline-none focus:border-cyan-600 transition-colors text-sm"
               />
             </div>
