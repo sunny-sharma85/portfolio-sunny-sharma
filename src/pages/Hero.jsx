@@ -64,7 +64,7 @@ const Hero = () => {
 
           {/* Download Resume Button */}
           <a
-            href="/devender_sharma_cv.pdf"
+            href="/Devender_Sharma_Resume.pdf"
             download="Devender_Sharma_CV.pdf"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold text-sm transition-all border border-gray-300 shadow-sm"
           >
